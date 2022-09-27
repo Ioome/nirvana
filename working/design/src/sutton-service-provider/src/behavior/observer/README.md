@@ -27,3 +27,46 @@
 ## Demo 
 
 
+Observer.java
+```
+/**
+ * 所有观察者需要实现的接口🤔
+ */
+public interface Observer {
+
+    void update(String msg);
+
+}
+
+```
+--- 
+SubjectService.java
+```
+
+/**
+ * 推送者
+ */
+public interface SubjectService {
+
+    /**
+     * 注册观察者
+     * 
+     * @param observer
+     */
+    void registerObservers(Observer observer);
+
+    /**
+     * 移动观察者
+     * 
+     * @param observer
+     */
+    void removeObservers(Observer observer);
+
+    /*
+     * 消息推送接口
+     */
+    void notifyObservers();
+}
+
+```
+
