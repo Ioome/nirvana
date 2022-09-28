@@ -4,6 +4,6 @@
  */
 public interface Observer {
 
-    void update(String msg);
+    void update(String lotteryMsg);
 
 }
