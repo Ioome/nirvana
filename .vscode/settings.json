@@ -1,0 +1,11 @@
+{
+  "java.project.sourcePaths": [
+    "working/threadmv/demo/src/main/java/com/example/demo",
+    "working/threadStu/src/main/java/com/sutton",
+    "working/design/src/sutton-service/src/service",
+    "working/design/src/sutton-service-provider/src/behavior/observer",
+    "working/design/src/sutton-service-bean/src",
+    "working/design/src",
+    "working/concurrent/demo/src/main/webapp/java"
+  ]
+}
