@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/createObeject/createAobject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/example/example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/everythingIsAnObject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
