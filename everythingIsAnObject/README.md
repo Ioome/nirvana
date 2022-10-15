@@ -74,4 +74,23 @@
 Java 为了可移植性，基本数据类型的大小是固定的，即时移动到一台新的机器<br />
 它的大小也不会改变.
  
+#### 高精度数字:BigInteger And BigDecimal
+为什么有专门处理高精度的类?
+这是因为在 Java 在处理一些金额领域上，基本类型是不能够对付的,会产生软件工程领域上的一个问题: **精度损失**
+```java
+ public class highPrecision {
+    public static void main(String[] args) {
+        System.out.println(0.05 + 0.01);
+        System.out.println(1.0 - 0.42);
+        System.out.println(4.015 * 100);
+        System.out.println(123.3 / 100);
+        BigDecimal bigDecimal=new BigDecimal(0.1);
+    }
+}
+```
+那么产生这个的原因是什么呢？ 
+这是因为计算机是二进制表示的，我们都很清楚这个，浮点数是无法精确表示的.
 
+[细节]https://jingyan.baidu.com/article/425e69e6e93ca9be15fc1626.html
+
+#### 如何解决
