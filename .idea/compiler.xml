@@ -6,7 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="container" />
+        <module name="genericsx" />
+        <module name="reuse" />
+        <module name="initAndClean" />
+        <module name="IO" />
+        <module name="control" />
+        <module name="polymorphism" />
+        <module name="enumClass" />
+        <module name="holdObject" />
+        <module name="error" />
+        <module name="stringClass" />
+        <module name="inner" />
+        <module name="typeinformation" />
+        <module name="operator" />
+        <module name="interfaceclass" />
+        <module name="Concurrency" />
+        <module name="permissions" />
+        <module name="unusualRestrictions" />
+        <module name="everythingIsAnObject" />
         <module name="introduction" />
+        <module name="regular" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
