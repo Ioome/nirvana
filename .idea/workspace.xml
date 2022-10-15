@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/tv/HP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/tv/Tv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/tv/remote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/tv/remoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/tv/xiaomi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/everythingIsAnObject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +66,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,7 +75,7 @@
       <recent name="D:\app\nirvana\nirvana" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.sutton.introduction.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sutton.everythingIsAnObject.Main" />
       <module name="everythingIsAnObject" />
@@ -89,8 +104,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.sutton.introduction.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.sutton.introduction.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -123,5 +138,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
