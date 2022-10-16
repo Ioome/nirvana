@@ -27,6 +27,7 @@ public class kkalipaaBox {
 
     public static void main(String[] args) {
         kkalipaaBox kkalipaaBox=new kkalipaaBox();
+        kkalipaaBox.setKkalipaaName("卡里怕怪物");
         System.out.println(kkalipaaBox.getKkalipaaName());
     }
 }
