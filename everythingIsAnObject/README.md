@@ -95,3 +95,211 @@ Java 为了可移植性，基本数据类型的大小是固定的，即时移动
 
 #### 如何解决
 使用   BigDecimal  类  解决这个问题
+```java
+package com.sutton.everythingIsAnObject.util;
+
+import java.math.BigDecimal;
+
+/**
+ * @version 1.0.1
+ * @program: nirvana
+ * @description: 由于Java的简单类型不能够精确的对浮点数进行运算，这个工具类提供精   * 确的浮点数运算，包括加减乘除和四舍五入
+ * @author: Mr.wang.sutton
+ * @create: 2022-10-15 17:35
+ **/
+public class ArithUntil {
+
+    /**
+     * 默认除法运算精度
+     */
+    private static final int DEF_DIV_SCALE = 10;
+
+    /**
+     * 默认不可实例化
+     */
+    private ArithUntil() {
+    }
+
+    /**
+     * 处理加法运算
+     *
+     * @param parameter_one
+     * @param parameter_two
+     * @return double
+     */
+    public static double add(double parameter_one, double parameter_two) {
+        BigDecimal param_one = new BigDecimal(String.valueOf(parameter_one));
+        BigDecimal parma_two = new BigDecimal(String.valueOf(parameter_two));
+        return param_one.add(parma_two).doubleValue();
+    }
+
+    /**
+     * 作一个减法操作
+     *
+     * @param parameter_one
+     * @param parameter_two
+     * @return 两者相减去的结果
+     */
+    public static double substract(double parameter_one, double parameter_two) {
+        BigDecimal param_one = new BigDecimal(String.valueOf(parameter_one));
+        BigDecimal parma_two = new BigDecimal(String.valueOf(parameter_two));
+        return param_one.subtract(parma_two).doubleValue();
+    }
+
+    /**
+     * 乘法操作
+     *
+     * @param parameter_one
+     * @param parameter_two
+     * @return 两者相乘的结果
+     */
+    public static double multiplication(double parameter_one, double parameter_two) {
+        BigDecimal param_one = new BigDecimal(String.valueOf(parameter_one));
+        BigDecimal parma_two = new BigDecimal(String.valueOf(parameter_two));
+        return param_one.multiply(parma_two).doubleValue();
+    }
+
+    /**
+     * 除法操作
+     *
+     * @param parameter_one
+     * @param parameter_two
+     * @return 两者相除的结果
+     */
+    public static double division(double parameter_one, double parameter_two) {
+        return accuracyCalculation(parameter_one, parameter_two, DEF_DIV_SCALE);
+    }
+
+    /**
+     * 根据 DEF_DIV_SCALE 对不可精确的数进行四舍五入
+     *
+     * @param parameter_one
+     * @param parameter_two
+     * @param defaultDivScale
+     * @return 被 defaultDivScale 处理过的一个除法操作结果.
+     */
+    public static double accuracyCalculation(double parameter_one, double parameter_two, int defaultDivScale) {
+        if (defaultDivScale < 0) {
+            throw new IllegalArgumentException("The Scale must a positive Integer👩");
+        }
+        BigDecimal param_one = new BigDecimal(parameter_one);
+        BigDecimal param_two = new BigDecimal(parameter_two);
+        return param_one.divide(param_two).doubleValue();
+    }
+
+
+    /**
+     * 四舍五入
+     * @param parameter_one
+     * @param defaultDivScale
+     * @return 返回已经四舍五入的结果
+     */
+    public static double round(double parameter_one, int defaultDivScale) {
+        if (defaultDivScale < 0) {
+            throw new IllegalArgumentException("The scale must  a positive Integer.");
+        }
+        BigDecimal param_one = new BigDecimal(parameter_one);
+        BigDecimal one_Accuracy = new BigDecimal("1");
+        return param_one.divide(one_Accuracy, defaultDivScale, BigDecimal.ROUND_HALF_UP).doubleValue();
+    }
+
+
+}
+```
+
+### 变量作用域
+
+--- 
+在 java 中 {} 控制了 变量的访问控制 和 生命周期
+
+```java
+public class scope {
+
+    public static void variableScope() {
+        int x = 12;
+        //Only  x ariable
+        {
+          int q=96;
+          //Both x & q available
+        }
+        //errot example
+        System.out.println(q);
+        //Only x available
+        //q is  "out of scope"
+    }
+
+    public static void main(String[] args) {
+        scope.variableScope();
+    }
+
+}
+```
+对象的作用域比较特殊,尽管超出了作用域,但是它是存在的，不会直接从内存去除
+<br />记得只是对象不会从内存去除，但是引用还是会引用不了那个对象.
+
+
+###  新的数据类型
+
+--- 
+class 这个关键字我们将会一直使用喔.
+```java
+ class AtypeName{/**Class body goes here**/}
+```
+在未产生服务之前，它不能做任何事情,也就是说它是一个不能提供服务的 '**waste**'
+
+
+### 字段和方法
+
+--- 
+获取你可想象它是一个很完美的 '**构造 Java 世界元素的一个盒子**'
+这个盒子比较特殊,它可以根据 'class' 产生一定的实体,什么意思呢?
+我们需要通过蓝图  class 去创造一个**卡里怕(一种怪物)**.
+假设盒子里面有一个属性是: **kkalipaaName**,这个盒子将会去创建一个
+一个真正的 卡里怕. 每个实体都有名字.那么我们需要这个盒子拥有一个 **动作**
+返回 **卡里怕** 的名字.好了,我们想象好了，我们需要一个这样的盒子.📦
+
+##### 卡里怕盒子📦
+
+```java
+/**
+ * @version 1.0.1
+ * @program: nirvana
+ * @description: 卡里怕盒子
+ * @author: Mr.wang.sutton
+ * @create: 2022-10-16 20:06
+ **/
+public class kkalipaaBox {
+
+    /**
+     *  盒子有个卡里怕名字
+     */
+    private  String  kkalipaaName;
+
+    /**
+     *  卡里怕动作
+     */
+    public String getKkalipaaName() {
+        return kkalipaaName;
+    }
+}
+```
+卡里怕实体出现了，它是一个没有名字的卡里怕.
+```java
+ public static void main(String[] args) {
+        kkalipaaBox kkalipaaBox=new kkalipaaBox();
+        System.out.println(kkalipaaBox.getKkalipaaName());
+}
+```
+哇喔, 太恐怖了😵‍💫.
+那么我们给他一个取名字的动作吧
+```java
+  public void setKkalipaaName(String kkalipaaName) {
+        this.kkalipaaName = kkalipaaName;
+    }
+
+```
+我们拿着创建元素的引用去发送给这个实体，告诉他，喂！设置一个名字,那么将会
+去设置一个值
+```java
+
+```
