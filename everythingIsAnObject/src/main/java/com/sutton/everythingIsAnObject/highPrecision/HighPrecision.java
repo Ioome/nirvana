@@ -1,5 +1,7 @@
 package com.sutton.everythingIsAnObject.highPrecision;
 
+import com.sutton.everythingIsAnObject.util.ArithUntil;
+
 import java.math.BigDecimal;
 
 /**
@@ -11,7 +13,6 @@ import java.math.BigDecimal;
  **/
 public class HighPrecision {
     public static void main(String[] args) {
-        System.out.println(1.0-0.8);
-        BigDecimal bigDecimal=new BigDecimal(0.1);
+        System.out.println(ArithUntil.add(1.0,2.0));
     }
 }

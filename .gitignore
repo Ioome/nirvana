@@ -8,6 +8,7 @@
 .idea/compiler.xml
 .idea/libraries/
 .idea/workspact.xml
+.idea/
 *.iws
 *.iml
 *.ipr
