@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="sutton&#10;&#10;增加注释">
-      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/nirvana-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/nirvana-common/src/main/java/com/sutton/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/nirvana-common/src/main/java/com/sutton/common/constant/SysCommonConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/util/ArithUntil.java" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/util/ArithUntil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/createObeject/createAobject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/example/example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/highPrecision/highPrecision.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/tv/HP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/tv/Tv.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/tv/remote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/tv/remoteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/target/classes/com/sutton/everythingIsAnObject/tv/xiaomi.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +48,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="查找所有的方法" pattern="lib:*..*" />
+  </component>
   <component name="ProjectId" id="2G9w3vGjMrG79OdxtHfj0NkMnEe" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,15 +73,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.general",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\nirvana\nirvana\common\nirvana-common\src\main\java\com\sutton\common" />
       <recent name="D:\app\nirvana\nirvana" />
     </key>
   </component>
@@ -163,7 +180,8 @@
       <workItem from="1665909810512" duration="14000" />
       <workItem from="1665909835259" duration="14000" />
       <workItem from="1665909921069" duration="133000" />
-      <workItem from="1665910080740" duration="1983000" />
+      <workItem from="1665910080740" duration="5203000" />
+      <workItem from="1665916927885" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="sutton&#10;&#10;增加注释">
       <created>1665910910766</created>

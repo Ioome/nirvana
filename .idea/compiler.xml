@@ -23,6 +23,7 @@
         <module name="interfaceclass" />
         <module name="Concurrency" />
         <module name="permissions" />
+        <module name="nirvana-common" />
         <module name="unusualRestrictions" />
         <module name="everythingIsAnObject" />
         <module name="introduction" />

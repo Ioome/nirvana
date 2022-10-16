@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/IO/pom.xml" />
         <option value="$PROJECT_DIR$/enumClass/pom.xml" />
         <option value="$PROJECT_DIR$/Concurrency/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
       </list>
     </option>
   </component>
