@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/ArithUntil.java" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/ArithUntil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/ArithUntil.java" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/util/ArithUntil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/highPrecision/highPrecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/src/main/java/com/sutton/everythingIsAnObject/highPrecision/HighPrecision.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,38 +45,51 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaVariableFindUsagesOptions.isSearchForAccessors": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "D:/app/nirvana/nirvana",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaVariableFindUsagesOptions.isSearchForAccessors&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/app/nirvana/nirvana&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.emmet&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\app\nirvana\nirvana" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.highPrecision">
+  <component name="RunManager" selected="Application.HighPrecision">
+    <configuration name="HighPrecision" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sutton.everythingIsAnObject.highPrecision.HighPrecision" />
+      <module name="everythingIsAnObject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sutton.everythingIsAnObject.highPrecision.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sutton.everythingIsAnObject.Main" />
       <module name="everythingIsAnObject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sutton.everythingIsAnObject.*" />
+          <option name="PATTERN" value="com.sutton.everythingIsAnObject.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,22 +136,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="highPrecision" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sutton.everythingIsAnObject.highPrecision.highPrecision" />
-      <module name="everythingIsAnObject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sutton.everythingIsAnObject.highPrecision.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.highPrecision" />
+        <item itemvalue="Application.HighPrecision" />
         <item itemvalue="Application.createAobject" />
         <item itemvalue="Application.example" />
         <item itemvalue="Application.Main" />
@@ -158,6 +159,8 @@
       <workItem from="1665815207794" duration="207000" />
       <workItem from="1665815427793" duration="466000" />
       <workItem from="1665815907783" duration="3021000" />
+      <workItem from="1665908502377" duration="171000" />
+      <workItem from="1665908706694" duration="47000" />
     </task>
     <servers />
   </component>

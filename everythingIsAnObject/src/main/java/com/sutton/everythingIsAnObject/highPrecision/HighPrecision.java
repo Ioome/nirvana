@@ -9,10 +9,9 @@ import java.math.BigDecimal;
  * @author: Mr.wang.sutton
  * @create: 2022-10-15 17:25
  **/
-public class highPrecision {
+public class HighPrecision {
     public static void main(String[] args) {
         System.out.println(1.0-0.8);
         BigDecimal bigDecimal=new BigDecimal(0.1);
-
     }
 }

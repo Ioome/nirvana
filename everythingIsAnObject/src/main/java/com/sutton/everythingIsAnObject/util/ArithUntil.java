@@ -1,4 +1,4 @@
-package com.sutton.everythingIsAnObject;
+package com.sutton.everythingIsAnObject.util;
 
 /**
  * @version 1.0.1
