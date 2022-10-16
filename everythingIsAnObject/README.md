@@ -94,3 +94,4 @@ Java 为了可移植性，基本数据类型的大小是固定的，即时移动
 [细节]https://jingyan.baidu.com/article/425e69e6e93ca9be15fc1626.html
 
 #### 如何解决
+使用   BigDecimal  类 
