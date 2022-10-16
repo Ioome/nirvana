@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="">
+    <list default="true" id="15b27fcd-a7cc-495a-b11a-94103d4a8afb" name="Changes" comment="sutton&#10;&#10;增加注释">
       <change beforePath="$PROJECT_DIR$/everythingIsAnObject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/everythingIsAnObject/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -163,7 +163,16 @@
       <workItem from="1665909810512" duration="14000" />
       <workItem from="1665909835259" duration="14000" />
       <workItem from="1665909921069" duration="133000" />
+      <workItem from="1665910080740" duration="1983000" />
     </task>
+    <task id="LOCAL-00001" summary="sutton&#10;&#10;增加注释">
+      <created>1665910910766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665910910766</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +225,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sutton&#10;&#10;增加注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="sutton&#10;&#10;增加注释" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
