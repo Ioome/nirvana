@@ -8,7 +8,10 @@ package com.sutton.initAndClean.useArrayNew;
  * @create: 2022-10-17 18:00
  **/
 
-class A { int i; }
+class A {
+    int i;
+}
+
 public class VarArgs {
     static void f(Object[] x) {
         for (int i = 0; i < x.length; i++) {
@@ -17,6 +20,6 @@ public class VarArgs {
     }
 
     public static void main(String[] args) {
-        f(new Object[]{new Integer(47),new Float(3.14), new Double(11.11) });
+        f(new Object[]{new Integer(47), new Float(3.14), new Double(11.11)});
     }
 }
