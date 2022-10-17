@@ -89,12 +89,5 @@ public class stuConcurrentHashMap {
 
 
     public static void main(String[] args) {
-        putMap();
-        usedKeySet();
-        usedValues();
-        useKeySetAndGetKey();
-        useEntry();
-        useIterator();
-        useLambda();
     }
 }
