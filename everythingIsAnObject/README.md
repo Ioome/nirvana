@@ -352,4 +352,49 @@ ReturnType methodName(/****/){
 
 ----
 参数列表规定了我们传送给方法的是什么信息
-分基本数据类型，引用类型,不过我告诉你一个秘密，java 是值传递.
+分基本数据类型，引用类型,不过我告诉你一个秘密，java 是值传递.有过编程经验的人对这个知识点很有感觉,可确实是这样 Java 就是**值传递**
+我们先通过一个泡面涨价的例子去学习方法发列表吧
+```java
+/**
+ * @version 1.0.1
+ * @program: nirvana
+ * @description: 方法参数
+ * @author: Mr.wang.sutton
+ * @create: 2022-10-17 08:07
+ **/
+public class paramList {
+
+    /**
+     *  商店的泡面
+     *  默认:4.0
+     */
+    private  BigDecimal instantNoodles=new BigDecimal(4.0);
+
+    /**
+     * 商店进行涨价的动作
+     * @param price
+     * @return
+     */
+    double priceIncrease(BigDecimal price){
+        return instantNoodles.subtract(price).doubleValue();
+    }
+
+    public BigDecimal getInstantNoodles() {
+        return instantNoodles;
+    }
+
+    public void setInstantNoodles(BigDecimal instantNoodles) {
+        this.instantNoodles = instantNoodles;
+    }
+
+    public static void main(String[] args) {
+        paramList shopping=new paramList();
+        shopping.priceIncrease(new BigDecimal(20));
+        System.out.println("泡面涨价了🤑 "+shopping.getInstantNoodles());
+
+    }
+}
+```
+上面例子是我们通过传递涨价的金额，对商店里的泡面进行涨价了,它是根据你传入的参数来觉得涨价多少,
+这很神奇.当我们走到 **return**  时,它意味着“离开方法，我已完工了”,**return** 可以是一个值也可以是一个 **表达式(通过式子计算出一个值)🧮**
+
