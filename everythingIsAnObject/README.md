@@ -482,5 +482,41 @@ public class SCHOOLWC {
 
 // 这是一条单行注释
 ```
+#####  注释文档具体语法
+嵌入HTML
+
+----
+```java
+/**
+* 您<em>甚至</em>可以插入一个列表：
+* <ol>
+* <li> 项目一
+* <li> 项目二
+* <li> 项目三
+* </ol>
+*/
+```
+
+##### 文档注释
+
+----
+
+1. @version
+2. @author
+
+##### 方法文档标记
+```java
+1. @param
+2. @return
+3. @exception
+4. @deprecated 该标记用于指出一些旧功能已由改进过的新功能取代
+```
+
+##### 文档示例
+```java
+//: Property.java
+```
+
+
 
 
