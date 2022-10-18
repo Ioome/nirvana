@@ -15,5 +15,6 @@ package 是组织代码的工具
 
 
 ##### 如何组织包
-反域名格式.
+反域名格式.<br />
+PUBLIC PROTECTED  DEFAULT PRIVATE
 
