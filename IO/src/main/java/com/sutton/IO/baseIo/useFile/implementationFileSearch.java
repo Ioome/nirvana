@@ -41,4 +41,21 @@ public class implementationFileSearch {
             }
         }
     }
+
+    public static  void deleteFile(File file,String name){
+        //返回文件列
+        File[] files = file.listFiles();
+        //判断是否大于 0
+        if(files.length>0){
+//遍历当前目录
+            for (File f : files) {
+                //判断是否文件夹
+                if (f.isDirectory()) {
+                        deleteFile(f,name);
+                }else {
+                     f.delete();
+                }
+            }
+        }
+    }
 }
