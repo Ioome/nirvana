@@ -18,3 +18,8 @@ package 是组织代码的工具
 反域名格式.<br />
 PUBLIC PROTECTED  DEFAULT PRIVATE
 
+##### JavaBean
+1. 类是公共的
+2. 无参的公共构造
+3. get set
+
