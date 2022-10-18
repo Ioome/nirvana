@@ -29,7 +29,6 @@ public class useForEach {
         List<String> list;
         list = new ArrayList<String>();
         for (String e : list) {
-            list.add("1");
         }
     }
 }
