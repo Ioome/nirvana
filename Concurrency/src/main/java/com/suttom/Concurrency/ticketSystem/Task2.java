@@ -29,15 +29,17 @@ public class Task2 implements Runnable {
      */
     @Override
     public void run() {
-        while (true) {
-            if (ticket > 0) {
-                System.out.println(Thread.currentThread().getName() + "正在销售 " + ticket + "票");
-                ticket--;
-            } else {
-                System.out.println(Thread.currentThread().getName() + "销售完毕");
-                break;
-            }
-        }
+       synchronized (this){
+           while (true) {
+               if (ticket > 0) {
+                   System.out.println(Thread.currentThread().getName() + "正在销售 " + ticket + "票");
+                   ticket--;
+               } else {
+                   System.out.println(Thread.currentThread().getName() + "销售完毕");
+                   break;
+               }
+           }
+       }
     }
 
     public static void main(String[] args) {
