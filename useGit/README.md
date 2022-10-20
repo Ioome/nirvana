@@ -47,4 +47,11 @@ git merge cate
 git push
 ```
 
-测试 statu
+查看分支记录
+```java
+         git log - 查看历史提交记录。
+         git blame <file> - 以列表形式查看指定文件的历史修改记录。
+```
+
+添加远程库
+git remote add [shortname] [url]
