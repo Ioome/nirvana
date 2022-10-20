@@ -14,9 +14,9 @@ import static java.util.regex.Pattern.compile;
  **/
 public class usePattern {
     public static void main(String[] args) {
-        String patternString = "^[0-9]*$";
+        String patternString = "^((0?[1-9])|((1|2)[0-9])|30|31)$";
         Pattern pattern = compile(patternString, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher("1");
+        Matcher matcher = pattern.matcher("31");
         boolean matchFound = matcher.find();
         if (matchFound) {
             System.out.println("找到");
