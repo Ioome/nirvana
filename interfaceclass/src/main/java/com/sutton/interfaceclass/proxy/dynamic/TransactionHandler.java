@@ -37,6 +37,7 @@ public class TransactionHandler implements InvocationHandler {
      *               {@code java.lang.Integer} or {@code java.lang.Boolean}.
      * @return
      * @throws Throwable
+     * 最终会被调用的东西
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
