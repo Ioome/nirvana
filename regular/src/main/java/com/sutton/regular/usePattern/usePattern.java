@@ -14,12 +14,13 @@ import static java.util.regex.Pattern.compile;
  **/
 public class usePattern {
     public static void main(String[] args) {
-        Pattern pattern = compile("w3schools", Pattern.CASE_INSENSITIVE);
-        Matcher matcher=pattern.matcher("Visit11111 W3Schools!");
-        boolean matchFound=matcher.find();
-        if(matchFound){
+        String patternString = "^[0-9]*$";
+        Pattern pattern = compile(patternString, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher("1");
+        boolean matchFound = matcher.find();
+        if (matchFound) {
             System.out.println("找到");
-        }else {
+        } else {
             System.out.println("未发现");
         }
 
