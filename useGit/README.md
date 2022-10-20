@@ -33,6 +33,7 @@ git diff HEAD 显示工作区和HEAD的文件的差异
 查看当前分支
 ```
 git branch -vv
+ git branch
 ```
 
 删除分支
