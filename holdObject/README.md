@@ -140,3 +140,16 @@ public E get(int index) {
             System.out.println(i);
         }
 ```
+
+## subList bug 已修复
+
+```java
+      public SubList(ArrayList<E> root, int fromIndex, int toIndex) {
+            this.root = root;
+            this.parent = null;
+            this.offset = fromIndex;
+            this.size = toIndex - fromIndex;
+            this.modCount = root.modCount;
+        }
+
+```

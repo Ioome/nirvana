@@ -20,6 +20,7 @@ public class useArrayListSubList {
         List<Integer> stuCard = new ArrayList<>();
         //产生1000个
         suttonGenerateNumeberList(stuCard, 10000);
+        System.out.println(stuCard.hashCode());
         //使用subList 方法
         List<Integer> beforeThsound = stuCard.subList(0, 1000);
         isoStucard(beforeThsound);

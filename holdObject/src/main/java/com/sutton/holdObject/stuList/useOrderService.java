@@ -22,14 +22,10 @@ public class useOrderService {
      * 里面有处理数据的逻辑
      */
     public void process() {
-        //数据返回到这里面
         List<Long> orderIdList = queryOrder();
-        //生成一个 失败单号
         List<List<Long>> allFailedList = new ArrayList<>();
-        //再循环 Integer
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+        for(int i = 0; i < Integer.MAX_VALUE; i++) {
             System.out.println(i);
-            //做逻辑
             List<Long> failedList = doProcess(orderIdList);
             allFailedList.add(failedList);
         }
@@ -42,15 +38,14 @@ public class useOrderService {
      */
     private List<Long> doProcess(List<Long> orderIdList) {
 
-        //生成一个 失败列表
         List<Long> failedList = new ArrayList<>();
-        //返回余数
-        for (Long orderId : failedList) {
+        for (Long orderId : orderIdList) {
             if (orderId % 2 == 0) {
-                failedList.add(orderId);
+                failedList.add(orderId) ;
             }
         }
-        return failedList.subList(0,1);
+        // 只取一个失败的订单id做分析
+        return failedList.subList(0, 1);
     }
 
     /**
@@ -59,14 +54,11 @@ public class useOrderService {
      * @return
      */
     private List<Long> queryOrder() {
-        Random random = new Random(100);
-        //产生一个 动态数组
+        Random  random=new Random(100);
         List<Long> orderIdList = new ArrayList<>();
-        //循环1000
         for (int i = 0; i < 1000; i++) {
             orderIdList.add(random.nextLong());
         }
-        //返回
         return orderIdList;
     }
 }
