@@ -213,4 +213,12 @@ ArrayList<Integer> castList = (ArrayList<Integer>) subList;
      ArrayList<String>listArrSub = (ArrayList<String>) listArr.subList(1, 3);
 
 ````
-错误行为
+错误行
+
+
+
+### 使用技巧
+
+---
+
+多线程快速处理 List 集合，你学会了吗？
