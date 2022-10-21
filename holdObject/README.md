@@ -1,11 +1,22 @@
 # ArrayList源码分析
 
 ![img.png](img.png)
+
+# 看源码
+
+
+
 ```java
 数组可能是我们最早接触到的数据结构之一，它是在内存中划分出一块连续的地址空间用来进行元素的存储，由于它直接操作内存，所以数组的性能要比集合类更好一些，这是使用数组的一大优势
 ```
 致命缺陷：
 1. 初始化时必须指定数组大小，并且在后续操作中不能再更改数组的大小
+
+![img_2.png](img_2.png)
+实现 List 基础功能， ，继承了AbstractList抽象类，底层是数组实现的，并且实现了自增扩容数组大小。
+
+
+
 
 ArrayList  是基于数组实现.
 ````
@@ -141,7 +152,13 @@ public E get(int index) {
         }
 ```
 
-## subList bug 已修复
+### transient关键字修饰该字段则表示该属性不会被序列化。
+```java
+但ArrayList其实是实现了序列化接口，这是为什么呢？
+```
+由于ArrayList的数组是基于动态扩增的，所以并不是所有被分配的内存空间都存储了数据。
+内部提供了两个私有方法writeObject以及readObject来自我完成序列化与反序列化，从而在序列化与反序列化数组时节省了空间和时间
+## subList bug 已修复 
 
 ```java
       public SubList(ArrayList<E> root, int fromIndex, int toIndex) {
@@ -153,3 +170,47 @@ public E get(int index) {
         }
 
 ```
+
+```java
+   public static void main(String[] args) {
+        List<Long> arrayList = init();
+        List<Long> subList = arrayList.subList(0, 1);
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.size());
+            if (arrayList.get(i) % 2 == 0) {
+                subList.add(arrayList.get(i));
+            }
+        }
+    }
+
+    private static List<Long> init() {
+        Random random = new Random(10);
+        List<Long> arrayList = new ArrayList<>();
+        arrayList.add(random.nextLong());
+        arrayList.add(random.nextLong());
+        arrayList.add(random.nextLong());
+        arrayList.add(random.nextLong());
+        arrayList.add(random.nextLong());
+        return arrayList;
+    }
+```
+
+###### 无限踩坑
+![img_1.png](img_1.png)
+
+````java
+
+public static void main(String[] args) {
+List<Integer> integerList = new ArrayList<>();
+integerList.add(0);
+integerList.add(1);
+integerList.add(2);
+List<Integer> subList = integerList.subList(0, 1);
+
+ArrayList<Integer> castList = (ArrayList<Integer>) subList;
+}
+        
+     ArrayList<String>listArrSub = (ArrayList<String>) listArr.subList(1, 3);
+
+````
+错误行为
