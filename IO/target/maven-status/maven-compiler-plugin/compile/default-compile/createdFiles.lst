@@ -5,11 +5,14 @@ sutton\IO\baseIo\useFile\useFileInputStream.class
 com\sutton\IO\baseIo\useFile\usePipedOutputStreamAndPipedInputStream$1.class
 com\sutton\IO\baseIo\useFile\useDataInputStream.class
 sutton\IO\baseIo\useFile\DirList.class
+com\sutton\IO\baseIo\useFile\useFileGet.class
 com\sutton\IO\Main.class
 com\sutton\IO\baseIo\useFile\Directory$1.class
+com\sutton\IO\baseIo\useFile\useFile.class
 sutton\IO\baseIo\useFile\implementationFileSearch.class
 com\sutton\IO\baseIo\useFile\Directory.class
 com\sutton\IO\baseIo\useFile\DirList2.class
+com\sutton\IO\baseIo\useFile\useFileCreateDelete.class
 com\sutton\IO\baseIo\useFile\useInputStreamReader.class
 com\sutton\IO\baseIo\useFile\useByteArrayOutputStream.class
 com\sutton\IO\baseIo\useFile\usePipedOutputStreamAndPipedInputStream.class
