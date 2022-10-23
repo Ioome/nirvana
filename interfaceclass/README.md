@@ -260,3 +260,55 @@ public static Object newProxyInstance(ClassLoader loader,
     }
 }
 ````
+
+
+#####  序列化和反序列化
+~~~
+序列化和反序列化是什么?
+我要为serialVersionUID指定个什么值?
+实现序列化和反序列化为什么要实现Serializable接口?
+实现Serializable接口就算了, 为什么还要显示指定serialVersionUID的值?
+~~~
+
+序列化：将对象转换为字节
+反序列号：将字节转化为对象
+
+##### 应用场景
+当我们需要将内存中的对象持久化到磁盘, 数据库中时, 当我们需要与浏览器进行交互时, 当我们需要实现RPC时, 这个时候就需要序列化和反序列化了
+
+---
+
+只要我们对内存中的对象进行持久化或网络传输, 这个时候都需要序列化和反序列化.
+```java
+public final class String  
+    implements java.io.Serializable, Comparable<String>, CharSequence {  
+    /** The value is used for character storage. */  
+    private final char value[];  
+  
+    /** Cache the hash code for the string */  
+    private int hash; // Default to 0  
+  
+    /** use serialVersionUID from JDK 1.0.2 for interoperability */  
+    private static final long serialVersionUID = -6849794470754667710L;  
+  
+    ......  
+}  
+```
+
+为什么实现接口 
+```java
+java 底层为我们做事
+```
+
+为什么要 UID 
+```java
+如果不显示指定serialVersionUID, JVM在序列化时会根据属性自动生成一个serialVersionUID, 然后与属性一起序列化, 再进行持久化或网络传输. 在反序列化时, JVM会再根据属性自动生成一个新版serialVersionUID, 然后将这个新版serialVersionUID与序列化时生成的旧版serialVersionUID进行比较, 如果相同则反序列化成功, 否则报错.
+```
+
+##### 特性
+
+, 被transient关键字修饰的属性不会被序列化, static属性也不会被序列化.
+
+为什么 static 不被序列化
+
+static属性为什么不会被序列化?

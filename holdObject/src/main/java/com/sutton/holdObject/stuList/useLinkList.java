@@ -15,6 +15,9 @@ public class useLinkList {
         cars.add("Volvo");
         cars.add("BMW");
         cars.add("Ford");
+        cars.addFirst("first");
+        cars.remove(0);
+        cars.remove();
         System.out.println(cars);
 
     }

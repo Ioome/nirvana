@@ -18,6 +18,8 @@
 
 
 
+
+
 ArrayList  是基于数组实现.
 ````
 //默认初始化容量
@@ -216,9 +218,3 @@ ArrayList<Integer> castList = (ArrayList<Integer>) subList;
 错误行
 
 
-
-### 使用技巧
-
----
-
-多线程快速处理 List 集合，你学会了吗？
