@@ -172,7 +172,7 @@ public class ReadSheetSystem {
      *
      * @return result
      */
-    public long c() {
+    public long getStudentCount() {
         long result = studentPos.stream().count();
         return result;
     }
