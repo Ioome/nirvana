@@ -5,9 +5,14 @@ import com.sutton.Test.constant.FileStudentScoreConstant;
 import com.sutton.Test.error.MyException;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -189,8 +194,22 @@ public class ReadSheetSystem {
     }
 
 
-    public void writeFile(){
-        
+    /**
+     * 将成绩导出到文件
+     * @throws IOException
+     */
+    public void writeFile() throws IOException {
+        FileWriter  fileWriter=new FileWriter("studentScore.txt ");
+        //使用 buffer 流提高速度
+        BufferedWriter writer=new BufferedWriter(fileWriter);
+        for(StudentPo studentPo:studentPos){
+            String name=studentPo.getName();
+            Double score=studentPo.getScore();
+            writer.write(name);
+            writer.write(String.valueOf(score));
+            writer.newLine();
+        }
+        writer.close();
     }
 
     /**
@@ -236,6 +255,7 @@ public class ReadSheetSystem {
         //打印平均分
         System.out.println(readSheetSystem.getStudentAverageScore().toString());
 
+        readSheetSystem.writeFile();
 
     }
 

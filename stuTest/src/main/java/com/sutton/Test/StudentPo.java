@@ -1,5 +1,7 @@
 package com.sutton.Test;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 /**
@@ -11,7 +13,9 @@ import lombok.Data;
  **/
 
 @Data
-public class StudentPo {
+public class StudentPo  implements Serializable {
+
+    private static final long serialVersionUID = -2095916884810199532L;
 
     /**
      * 学生姓名
