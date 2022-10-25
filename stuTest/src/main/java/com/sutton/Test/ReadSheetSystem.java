@@ -1,5 +1,6 @@
 package com.sutton.Test;
 
+import com.sutton.Test.api.common.StudentPatternScore;
 import com.sutton.Test.constant.FileStudentScoreConstant;
 import com.sutton.Test.error.MyException;
 
@@ -103,7 +104,6 @@ public class ReadSheetSystem {
     public void compareStudentScore() {
         //取出成绩单
         List<String> stardAnswerList = student.get("标准答案");
-        System.out.println(stardAnswerList);
         for (String name : student.keySet()) {
             int score = 0;
             for (int i = 0; i < student.get(name).size(); i++) {
@@ -156,7 +156,10 @@ public class ReadSheetSystem {
      */
     public StudentAverageDto getStudentAverageScore() {
         StudentAverageDto studentAverageDto = new StudentAverageDto();
-        return null;
+        Double avgs = studentPos.stream().mapToDouble(StudentPo::getScore).average().orElse(0D);
+        Double aDouble = StudentPatternScore.avegtransformTwo(avgs);
+        studentAverageDto.setScoreAverage(aDouble);
+        return studentAverageDto;
     }
 
     /**
@@ -183,6 +186,11 @@ public class ReadSheetSystem {
     public void getStudnetPo(String name) {
         Stream<StudentPo> studentPoStream = studentPos.stream().filter(element -> element.getName().contains(name));
         studentPoStream.forEach(System.out::println);
+    }
+
+
+    public void writeFile(){
+        
     }
 
     /**
@@ -214,11 +222,21 @@ public class ReadSheetSystem {
     public static void main(String[] args) throws MyException, IOException {
         ReadSheetSystem readSheetSystem = new ReadSheetSystem();
         readSheetSystem.saveFileData(new File("D:\\app\\nirvana\\nirvana\\stuTest\\src\\main\\java\\com\\sutton\\File\\test"));
+        //分数比较
         readSheetSystem.compareStudentScore();
+        //打印全部成绩
         readSheetSystem.printStudentScore();
-        double score = readSheetSystem.getStudentScoreLow();
-        System.out.println(score);
-        readSheetSystem.getStudentScoreRankList();
+        //平均分
+
+        //最高分
+        System.out.println("最高分: " + readSheetSystem.getStudentScoreHight());
+        //最低分
+        System.out.println("最低分: " + readSheetSystem.getStudentScoreLow());
+
+        //打印平均分
+        System.out.println(readSheetSystem.getStudentAverageScore().toString());
+
+
     }
 
 }

@@ -17,5 +17,5 @@ public class StudentAverageDto {
     /**
      * 学生平均分
      */
-    private BigDecimal scoreAverage;
+    private Double scoreAverage;
 }
