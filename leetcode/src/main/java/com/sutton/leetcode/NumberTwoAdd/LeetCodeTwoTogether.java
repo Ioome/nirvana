@@ -79,7 +79,7 @@ public class LeetCodeTwoTogether {
 
     public static void main(String[] args) {
         /**
-         * 342
+         * 243
          */
         ListNode listNode2 = new ListNode(2);
         listNode2.next = null;
@@ -87,12 +87,12 @@ public class LeetCodeTwoTogether {
         ListNode listNode3 = new ListNode(3, listNode4);
 
         /**
-         * 465
+         * 564
          */
         ListNode listNodeFive = new ListNode(5);
         listNodeFive.next = null;
-        ListNode listNodeSex = new ListNode(6, listNode2);
-        ListNode listNodeFour = new ListNode(4, listNode4);
+        ListNode listNodeSex = new ListNode(6, listNodeFive);
+        ListNode listNodeFour = new ListNode(4, listNodeSex);
 
         //342+642
         addTwoNumbers(listNode3, listNodeFour);
