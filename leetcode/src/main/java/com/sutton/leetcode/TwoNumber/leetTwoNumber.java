@@ -1,6 +1,8 @@
 package com.sutton.leetcode.TwoNumber;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @version 1.0.0
@@ -71,37 +73,41 @@ public class leetTwoNumber {
     }
 
     /**
-     * 暴力破解法 O(n2) 时间复杂度
+     * HashTable 表
+     * 把数组的每个元素保存为 hash 的 key，下标保存为 hash 的 value
      *
      * @param aimArray 数据数组
      * @param target   目标
      * @return int[2]  返回数组下标
      */
     public static int[] getArrayTwoIndexHashTableSeo(int[] aimArray, int target) {
-        int[] answer = new int[2];
+        //存取数组的值 和 key
+        Map<Integer, Integer> container = new HashMap<>();
 
-        //获取长度.📏
+        //将每个值存放至HashMap
         for (int i = 0; i < aimArray.length; i++) {
-            int subtractor;
-            for (int j = i + 1; j < aimArray.length; j++) {
-                //迭代符合条件的数,当有相同的数之后跳出.优化： 目标-迭代值=结果
-                subtractor = target - aimArray[i];
-                if (aimArray[j] == subtractor) {
-                    answer[0] = i;
-                    answer[1] = j;
-                    return answer;
-                }
+            container.put(aimArray[i], i);
+        }
+
+        int subtractor;
+        for (int i = 0; i < aimArray.length; i++) {
+            //目标减去数组得到第一个
+            subtractor=target-aimArray[i];
+            //查找容器是否存在
+            if(container.containsKey(subtractor)){
+                 return new int[]{i,container.get(subtractor)};
             }
         }
-        //返回结果
-        return answer;
-    }
 
+        //返回结果
+        throw new IllegalArgumentException("No two sum solution");
+    }
 
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(getArrayTwoIndex(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
         System.out.println(Arrays.toString(getArrayTwoIndexSeo(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
+        System.out.println(Arrays.toString(getArrayTwoIndexHashTableSeo(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
     }
 }
 
