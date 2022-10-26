@@ -1,7 +1,7 @@
 package com.sutton.leetcode.TwoNumber;
 
 /**
- * @version 1.0.1
+ * @version 1.0.0
  * @program: nirvana
  * @description: LeetCode 第一题：两数之和
  * 1.条件: 整数数组 nums和 一个整数目标值 target
@@ -16,12 +16,16 @@ package com.sutton.leetcode.TwoNumber;
 public class leetTwoNumber {
 
     /**
-     * *
+     * 暴力破解法
      * @param aimArray 数据数组
      * @param target   目标
+     * @return int[2]  返回数组下标
      */
-    public static void getArrayTwoIndex(int[] aimArray,int target){
+    public static int[2] getArrayTwoIndex(int[] aimArray,int target){
+        //获取长度.📏
+        for (int i = 0; i <aimArray.length; i++) {
 
+        }
     }
 
     public static void main(String[] args) {
