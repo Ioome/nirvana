@@ -22,6 +22,7 @@ public class leetTwoNumber {
      * @return int[2]  返回数组下标
      */
     public static int[] getArrayTwoIndex(int[] aimArray, int target) {
+        int[] answer = new int[2];
         //获取长度.📏
         for (int i = 0; i < aimArray.length; i++) {
             for (int j = i + 1; j < aimArray.length; j++) {
