@@ -42,8 +42,66 @@ public class leetTwoNumber {
         return answer;
     }
 
+
+    /**
+     * 暴力破解法 O(n) 时间复杂度
+     *
+     * @param aimArray 数据数组
+     * @param target   目标
+     * @return int[2]  返回数组下标
+     */
+    public static int[] getArrayTwoIndexSeo(int[] aimArray, int target) {
+        int[] answer = new int[2];
+
+        //获取长度.📏
+        for (int i = 0; i < aimArray.length; i++) {
+            int subtractor;
+            for (int j = i + 1; j < aimArray.length; j++) {
+                //迭代符合条件的数,当有相同的数之后跳出.优化： 目标-迭代值=结果
+                subtractor = target - aimArray[i];
+                if (aimArray[j] == subtractor) {
+                    answer[0] = i;
+                    answer[1] = j;
+                    return answer;
+                }
+            }
+        }
+        //返回结果
+        return answer;
+    }
+
+    /**
+     * 暴力破解法 O(n2) 时间复杂度
+     *
+     * @param aimArray 数据数组
+     * @param target   目标
+     * @return int[2]  返回数组下标
+     */
+    public static int[] getArrayTwoIndexHashTableSeo(int[] aimArray, int target) {
+        int[] answer = new int[2];
+
+        //获取长度.📏
+        for (int i = 0; i < aimArray.length; i++) {
+            int subtractor;
+            for (int j = i + 1; j < aimArray.length; j++) {
+                //迭代符合条件的数,当有相同的数之后跳出.优化： 目标-迭代值=结果
+                subtractor = target - aimArray[i];
+                if (aimArray[j] == subtractor) {
+                    answer[0] = i;
+                    answer[1] = j;
+                    return answer;
+                }
+            }
+        }
+        //返回结果
+        return answer;
+    }
+
+
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(getArrayTwoIndex(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
+        System.out.println(Arrays.toString(getArrayTwoIndexSeo(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
     }
 }
 
