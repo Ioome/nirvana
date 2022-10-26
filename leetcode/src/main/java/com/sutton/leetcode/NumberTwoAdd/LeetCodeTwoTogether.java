@@ -46,13 +46,28 @@ public class LeetCodeTwoTogether {
      * @param l2 链表 2
      * @return 相加之后得到的数字
      */
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         return null;
     }
 
     public static void main(String[] args) {
-        
+        /**
+         * 342
+         */
+        ListNode listNode2 = new ListNode(4);
+        ListNode listNode4 = new ListNode(2, listNode2);
+        ListNode listNode3 = new ListNode(3, listNode4);
+
+        /**
+         * 465
+         */
+        ListNode listNodeFive = new ListNode(5);
+        ListNode listNodeSex = new ListNode(6, listNode2);
+        ListNode listNodeFour = new ListNode(4, listNode4);
+
+        //342+642
+        addTwoNumbers(listNode3, listNodeFour);
     }
 
 }
