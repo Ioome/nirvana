@@ -16,7 +16,7 @@ import java.util.Map;
  * @author: Mr.wang.sutton
  * @create: 2022-10-26 11:36
  **/
-public class leetTwoNumber {
+public class LeetCodeTwoNumber {
 
     /**
      * 暴力破解法 O(n2) 时间复杂度
