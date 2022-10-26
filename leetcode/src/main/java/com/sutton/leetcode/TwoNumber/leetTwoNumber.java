@@ -1,5 +1,7 @@
 package com.sutton.leetcode.TwoNumber;
 
+import java.util.Arrays;
+
 /**
  * @version 1.0.0
  * @program: nirvana
@@ -15,7 +17,7 @@ package com.sutton.leetcode.TwoNumber;
 public class leetTwoNumber {
 
     /**
-     * 暴力破解法
+     * 暴力破解法 O(n2) 时间复杂度
      *
      * @param aimArray 数据数组
      * @param target   目标
@@ -26,16 +28,22 @@ public class leetTwoNumber {
         //获取长度.📏
         for (int i = 0; i < aimArray.length; i++) {
             for (int j = i + 1; j < aimArray.length; j++) {
-                if (aimArray.equals(target)) {
-                    System.out.println("hello");
+                //迭代符合条件的数,当有相同的数之后tiaochu
+                if (aimArray[i] + aimArray[j] == target) {
+                    //
+                    answer[0] = i;
+                    answer[1] = j;
+                    //返回结果
+                    return answer;
                 }
             }
         }
-        return null;
+        //返回结果
+        return answer;
     }
 
     public static void main(String[] args) {
-        getArrayTwoIndex(new int[]{1, 2, 3, 4, 5, 6, 7}, 5);
+        System.out.println(Arrays.toString(getArrayTwoIndex(new int[]{1, 2, 3, 4, 5, 6, 7}, 5)));
     }
 }
 
