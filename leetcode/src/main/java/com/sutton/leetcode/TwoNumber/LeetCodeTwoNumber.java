@@ -94,7 +94,7 @@ public class LeetCodeTwoNumber {
             //目标减去数组得到第一个
             subtractor=target-aimArray[i];
             //查找容器是否存在
-            if(container.containsKey(subtractor)){
+            if(container.containsKey(subtractor)&&container.get(subtractor)!=i){
                  return new int[]{i,container.get(subtractor)};
             }
         }

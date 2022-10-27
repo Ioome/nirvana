@@ -55,7 +55,7 @@ public class LeetCodeTwoTogether {
         ListNode p = l1, q = l2, curr = dummyHead;
         //进位默认值
         int carry = 0;
-        while (p != null && q != null) {
+        while (p != null || q != null) {
             //链表 1的值,如果q到最后是null 默认值为0
             int x = (p != null) ? p.val : 0;
             //链表 2的值
@@ -71,7 +71,7 @@ public class LeetCodeTwoTogether {
             if (q != null) q = q.next;
         }
         if (carry > 0) {
-            curr.next = new ListNode((carry));
+            curr.next = new ListNode(carry);
         }
 
         return dummyHead.next;
@@ -95,7 +95,12 @@ public class LeetCodeTwoTogether {
         ListNode listNodeFour = new ListNode(4, listNodeSex);
 
         //342+642
-        addTwoNumbers(listNode3, listNodeFour);
+        ListNode listNode = addTwoNumbers(listNode3, listNodeFour);
+        while (listNode.next!=null){
+           listNode=listNode.next;
+            System.out.println(listNode.val);
+
+        }
     }
 
 }
