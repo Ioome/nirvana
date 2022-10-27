@@ -56,3 +56,4 @@ git push
 
 添加远程库
 git remote add [shortname] [url]
+修改
