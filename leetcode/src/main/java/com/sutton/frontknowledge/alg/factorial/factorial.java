@@ -1,4 +1,4 @@
-package com.sutton.frontknowledge.alg.back;
+package com.sutton.frontknowledge.alg.factorial;
 
 /**
  * @version 1.0.1
