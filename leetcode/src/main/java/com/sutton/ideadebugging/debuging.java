@@ -10,7 +10,13 @@ import java.util.concurrent.ThreadLocalRandom;
  * @create: 2022-10-28 20:58
  **/
 public class debuging {
+    private Integer i=0;
+
     public static void main(String[] args) {
+        debuging debuging=new debuging();
+        for (int i = 0; i <10; i++) {
+            debuging.i++;
+        }
         ThreadLocalRandom random = ThreadLocalRandom.current();
         int count = 0;
         for (int i = 0; i < 5; i++) {
