@@ -15,11 +15,21 @@ public class reverse {
             x /= 10;
             rev = rev * 10 + pop;
         }
-        if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE ) return 0;
+        if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
     }
 
+    public static void append(String s) {
+        int i = 1;
+        while (i < 100000000) {
+            s += "github";
+            System.out.println(s);
+            i++;
+        }
+    }
+
     public static void main(String[] args) {
+        append("hello");
         System.out.println(reverse(1534236469));
     }
 }
