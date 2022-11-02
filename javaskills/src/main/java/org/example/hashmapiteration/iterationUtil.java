@@ -154,17 +154,48 @@ public class iterationUtil {
         });
     }
 
+    /**
+     * 使用迭代器删除元素
+     */
+    public void removeElementUseIterator() {
+        Iterator<Map.Entry<Integer, String>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Integer, String> entry = iterator.next();
+            if (entry.getKey() == 1) {
+                System.out.println("del:" + entry.getKey());
+                iterator.remove();
+            } else {
+                System.out.println("show:" + entry.getKey());
+            }
+        }
+    }
+
+    /**
+     * lambda
+     */
+    public void removeElementUseLambda(){
+        map.forEach((key, value) -> {
+            if (key == 1) {
+                System.out.println("del:" + key);
+                map.remove(key);
+            } else {
+                System.out.println("show:" + key);
+            }
+        });
+    }
+
     public static void main(String[] args) throws RunnerException {
         iterationUtil util = new iterationUtil();
         util.assignment();
         util.useStream();
-
+        util.removeElementUseLambda();
         // 启动基准测试
-        Options opt = new OptionsBuilder()
-                // 要导入的测试类
-                .include(iterationUtil.class.getSimpleName())
-                .output("jmh-map.log") // 输出测试结果的文件
-                .build();
-        new Runner(opt).run(); // 执行测试
+//        Options opt = new OptionsBuilder()
+//                // 要导入的测试类
+//                .include(iterationUtil.class.getSimpleName()).output("jmh-map.log") // 输出测试结果的文件
+//                .build();
+//        new Runner(opt).run(); // 执行测试
+
+
     }
 }
