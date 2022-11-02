@@ -105,7 +105,7 @@ public class iterationUtil {
     }
 
     /**
-     * 使用流
+     * 使用 Streams API 单线程的方式进行遍历；
      */
     public void useStream() {
         map.entrySet().stream().forEach((entry) -> {
@@ -114,8 +114,16 @@ public class iterationUtil {
         });
     }
 
-    //    使用 Streams API 单线程的方式进行遍历；
-    //    使用 Streams API 多线程的方式进行遍历。
+    /**
+     * 使用 Streams API 多线程的方式进行遍历。
+     */
+    public void useParallelStream() {
+        map.entrySet().parallelStream().forEach((entry) -> {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        });
+    }
+
     public static void main(String[] args) {
         iterationUtil util = new iterationUtil();
         util.assignment();
