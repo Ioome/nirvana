@@ -1,7 +1,10 @@
 package org.example.uselombok;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
-import lombok.Value;
 
 /**
  * @version 1.0.1
@@ -11,7 +14,10 @@ import lombok.Value;
  * @create: 2022-11-02 11:56
  **/
 
-@Value
+@Setter
+@NoArgsConstructor
+@Getter
+@ToString
 public class UseLomBokAnnatation {
 
 
@@ -37,10 +43,5 @@ public class UseLomBokAnnatation {
     }
 
     public static void main(String[] args) {
-        UseLomBokAnnatation useLomBokAnnatation = new UseLomBokAnnatation();
-        useLomBokAnnatation.setName("hello github");
-        System.out.println(useLomBokAnnatation.toString());
-        Square square = new Square(2200, 3000);
-        System.out.println(square.toString());
     }
 }
