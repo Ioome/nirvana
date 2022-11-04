@@ -24,7 +24,6 @@ public class Button {
             @Override
             public void onAction() {
                 System.out.println("click action..." + params);
-
             }
         }.onAction();
 
