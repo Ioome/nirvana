@@ -12,7 +12,7 @@ public class Employee {
     private int id;
     private String name;
     private int age;
-    private double salary;
+    private Double salary;
 
     @Override
     public String toString() {
@@ -60,6 +60,16 @@ public class Employee {
 
     public double getSalary() {
         return salary;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     public void setSalary(double salary) {
