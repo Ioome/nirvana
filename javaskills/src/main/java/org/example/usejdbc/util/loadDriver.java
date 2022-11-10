@@ -58,8 +58,7 @@ public class loadDriver {
     @Test
     /**
      * 通过反射 __new__ 一个 Driver
-     */
-    public void getConnectMethodThree() {
+     */ public void getConnectMethodThree() {
         //通过 new 对象的方式去创建
         Driver driver = null;
         try {
@@ -85,12 +84,12 @@ public class loadDriver {
     /**
      * 根据 URL USER PASSWORD 获取连接
      */
-    @Test
-    public void getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         System.out.println("-------获取连接-------");
         Connection connection = DriverManager.getConnection(DataPropertiesConstants.URL, DataPropertiesConstants.USER, DataPropertiesConstants.PASSWORD);
         System.out.println("南方的牧场机器人为你获取到: " + connection);
         System.out.println("获取成功");
+        return connection;
     }
 
 
