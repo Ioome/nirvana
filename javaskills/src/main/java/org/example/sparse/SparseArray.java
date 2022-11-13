@@ -1,5 +1,10 @@
 package org.example.sparse;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
 /**
@@ -22,7 +27,12 @@ public class SparseArray {
         //返回数值
         int count = getCount(array);
         //创建稀疏数组
-        int[][] sparse = createSparse(array, count);
+        int[][] sparse = new int[0][];
+        try {
+            sparse = createSparse(array, count);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         recover(sparse);
     }
@@ -32,7 +42,7 @@ public class SparseArray {
         //原数组
         System.out.println("--复原后的数组--");
 
-        for (int i = 1; i <sparse.length; i++) {
+        for (int i = 1; i < sparse.length; i++) {
             recoveryArray[sparse[i][0]][sparse[i][1]] = sparse[i][2];
         }
         Arrays.stream(recoveryArray).forEach(t -> System.out.println(Arrays.toString(t)));
@@ -45,7 +55,7 @@ public class SparseArray {
      * @param count 数量
      * @return 返回稀疏数组
      */
-    private static int[][] createSparse(int[][] array, int count) {
+    private static int[][] createSparse(int[][] array, int count) throws IOException {
         //创建稀疏数组
         int[][] sparearr = new int[count + 1][3];
         //给稀疏数组赋值
@@ -66,6 +76,27 @@ public class SparseArray {
         //使用 Consumer  遍历数组
         System.out.println("稀疏数组");
         Arrays.stream(sparearr).forEach(t -> System.out.println(Arrays.toString(t)));
+
+        //写入文件
+        File file = new File("sparse.txt");
+        if (!file.exists()) {
+            //如果文件不存在则创建文件
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        BufferedWriter fileWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "gbk"));
+
+        for (int i = 0; i < sparearr.length; i++) {
+            for (int j = 0; j < 3; j++) {
+                fileWriter.write(sparearr[i][j]);
+            }
+        }
+        fileWriter.flush();
+        fileWriter.close();
         return sparearr;
     }
 
