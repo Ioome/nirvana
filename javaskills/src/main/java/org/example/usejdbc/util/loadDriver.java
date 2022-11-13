@@ -54,7 +54,6 @@ public class loadDriver {
         }
     }
 
-
     @Test
     /**
      * 通过反射 __new__ 一个 Driver
@@ -80,7 +79,6 @@ public class loadDriver {
         }
     }
 
-
     /**
      * 根据 URL USER PASSWORD 获取连接
      */
@@ -91,6 +89,4 @@ public class loadDriver {
         System.out.println("获取成功");
         return connection;
     }
-
-
 }
