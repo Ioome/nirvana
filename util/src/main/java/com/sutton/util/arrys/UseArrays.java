@@ -2,8 +2,6 @@ package com.sutton.util.arrys;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.SimpleTimeZone;
-
 /**
  * @version 1.0.1
  * @program: nirvana
@@ -102,5 +100,4 @@ public class UseArrays {
         useSetAll();
         useParallelPrefix();
     }
-
 }
