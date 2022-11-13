@@ -16,16 +16,36 @@ public class SparseArray {
         //0 代码无值  1  代表有值
         array[1][2] = 1;
         array[2][3] = 2;
-        array[10][2]=3;
+        array[10][2] = 3;
         //打印
         extracted(array);
         //返回数值
         int count = getCount(array);
         //创建稀疏数组
-        createSparse(array, count);
+        int[][] sparse = createSparse(array, count);
+
+        recover(sparse);
     }
 
-    private static void createSparse(int[][] array, int count) {
+    private static void recover(int[][] sparse) {
+        int[][] recoveryArray = new int[sparse[0][0]][sparse[0][1]];
+        //原数组
+        System.out.println("--复原后的数组--");
+
+        for (int i = 1; i <sparse.length; i++) {
+            recoveryArray[sparse[i][0]][sparse[i][1]] = sparse[i][2];
+        }
+        Arrays.stream(recoveryArray).forEach(t -> System.out.println(Arrays.toString(t)));
+    }
+
+    /**
+     * 创建稀疏数组并返回稀疏数组
+     *
+     * @param array 原数组
+     * @param count 数量
+     * @return 返回稀疏数组
+     */
+    private static int[][] createSparse(int[][] array, int count) {
         //创建稀疏数组
         int[][] sparearr = new int[count + 1][3];
         //给稀疏数组赋值
@@ -44,7 +64,9 @@ public class SparseArray {
             }
         }
         //使用 Consumer  遍历数组
+        System.out.println("稀疏数组");
         Arrays.stream(sparearr).forEach(t -> System.out.println(Arrays.toString(t)));
+        return sparearr;
     }
 
     /**
