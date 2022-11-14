@@ -116,11 +116,11 @@ public class ArrayQueue {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
         while (loop) {
-            System.out.println("s(show): 显示队列");
-            System.out.println("e(exit): 退出队列");
-            System.out.println("a(add): 添加数据");
-            System.out.println("g(get): 获取数据");
-            System.out.println("h(head): 查看队头数据");
+            System.out.println("s(show): showQueue");
+            System.out.println("e(exit): exitQueue");
+            System.out.println("a(add):  addData");
+            System.out.println("g(get): getData");
+            System.out.println("h(head): viewHeadData");
             key = scanner.next().charAt(0);
             switch (key) {
                 case 's':
