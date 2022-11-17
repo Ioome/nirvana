@@ -1,6 +1,7 @@
 package org.example.arrayqueue;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -18,11 +19,11 @@ public class ArrayQueue {
     /**
      * 增加移动指针
      */
-    private Integer rear;
+    private int rear;
     /**
      * 获取移动指针
      */
-    private Integer front;
+    private int front;
     /**
      * 数组
      */
@@ -45,14 +46,14 @@ public class ArrayQueue {
      * rear=maxSize-1;
      */
     public boolean queueFull() {
-        return rear.equals(maxSize);
+        return rear==maxSize;
     }
 
     /**
      * 判断队列是空
      */
     public boolean queueIsEmpty() {
-        return rear.equals(front);
+        return Objects.equals(rear, front);
     }
 
     /**
@@ -138,6 +139,7 @@ public class ArrayQueue {
                 case 'h':
                     int headQueue = arrayQueue.pickHeadQueue();
                     System.out.println("查看队列头数据: " + headQueue);
+                    break;
                 case 'e':
                     scanner.close();
                     loop = false;
@@ -146,7 +148,6 @@ public class ArrayQueue {
                     break;
             }
             System.out.println("程序退出🦍");
-
         }
     }
 }
